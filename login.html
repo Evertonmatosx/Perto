@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Entre no Perto para encontrar os melhores locais próximos de você."
+    />
+    <meta name="theme-color" content="#426b52" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Entrar | Perto</title>
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="index.html">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Perto
+      </a>
+      <nav aria-label="Principal">
+        <ul class="nav-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="category.html">Locais</a></li>
+          <li><a href="cadastro.html">Cadastrar-se</a></li>
+          <li><a href="login.html" aria-current="page">Entrar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-cadastro">
+      <form class="auth-form" id="authForm" data-modo="login">
+        <h1>Entrar</h1>
+
+        <div class="auth-field">
+          <input id="usuario" placeholder="E-mail" aria-label="E-mail" autocomplete="email" type="email" required />
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        </div>
+
+        <div class="auth-field">
+          <input id="senha" placeholder="Senha" aria-label="Senha" autocomplete="current-password" type="password" required />
+          <i class="fa-solid fa-lock" aria-hidden="true"></i>
+        </div>
+
+        <label class="remember-option">
+          <input id="lembrar" type="checkbox" />
+          Lembrar meu e-mail
+        </label>
+
+        <p id="msg" class="msg" role="status"></p>
+
+        <div class="auth-actions">
+          <button type="submit" class="login">Entrar</button>
+        </div>
+
+        <p class="form-link">
+          Ainda não tem conta?
+          <a href="cadastro.html">Cadastre-se</a>
+        </p>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Perto. Todos os direitos reservados.</p>
+      <p class="footer-text">
+        Desenvolvido por
+        <a href="https://evertonmatosx.github.io/curriculo_online/">Emtsx_</a>
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4"></script>
+    <script src="common.js"></script>
+    <script src="auth.js"></script>
+  </body>
+</html>

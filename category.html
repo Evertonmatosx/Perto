@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Encontre locais por categoria perto de você."
+    />
+    <meta name="theme-color" content="#426b52" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Locais por categoria | Perto</title>
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="index.html">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Perto
+      </a>
+      <nav aria-label="Principal">
+        <ul class="nav-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="category.html" aria-current="page">Locais</a></li>
+          <li><a href="cadastro.html">Cadastrar-se</a></li>
+          <li><a href="login.html">Entrar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-locais">
+      <h1>Locais</h1>
+
+      <form class="busca-form" role="search" id="form-busca">
+        <label for="busca" class="sr-only">Buscar local</label>
+        <input
+          id="busca"
+          type="search"
+          name="q"
+          placeholder="Buscar por nome ou descrição..."
+        />
+        <button type="submit" class="btn-search">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> Buscar
+        </button>
+      </form>
+
+      <div
+        class="filtros"
+        id="filtros"
+        role="group"
+        aria-label="Filtrar por categoria"
+      ></div>
+
+      <div class="barra-resultados">
+        <p id="contagem" aria-live="polite"></p>
+      </div>
+
+      <div class="grade-locais" id="lista"></div>
+
+      <div class="vazio" id="vazio" hidden>
+        <h2>Nenhum local encontrado</h2>
+        <p>Tente outro termo ou escolha “Todos” nas categorias.</p>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Perto. Todos os direitos reservados.</p>
+      <p class="footer-text">
+        Desenvolvido por
+        <a href="https://evertonmatosx.github.io/curriculo_online/">Emtsx_</a>
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4"></script>
+    <script src="common.js"></script>
+    <script src="category.js"></script>
+  </body>
+</html>

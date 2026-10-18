@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>Administração | Perto</title>
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="index.html"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Perto</a>
+      <nav aria-label="Principal"><ul class="nav-links"></ul></nav>
+    </header>
+
+    <main class="page-locais">
+      <form class="auth-form" id="adminForm" data-bloco="login">
+        <h1>Administração</h1>
+        <div class="auth-field">
+          <input id="usuario" placeholder="E-mail da conta admin" aria-label="E-mail da conta admin" type="email" autocomplete="username" required />
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        </div>
+        <div class="auth-field">
+          <input id="senha" placeholder="Senha" aria-label="Senha" type="password" autocomplete="current-password" required />
+          <i class="fa-solid fa-lock" aria-hidden="true"></i>
+        </div>
+        <p id="msg" class="msg" role="status" aria-live="polite"></p>
+        <p class="admin-ajuda">
+          Use a conta criada no Supabase Auth e marcada com a função
+          <code>admin</code>. A configuração está em
+          <a href="supabase-admin-setup.sql" download>supabase-admin-setup.sql</a>.
+        </p>
+        <div class="auth-actions"><button type="submit" class="login">Entrar</button></div>
+      </form>
+
+      <section id="painel" hidden style="width:100%">
+       <div style="width:100%;display:flex;flex-direction:column;align-items:center">
+        <h1>Empresas pendentes</h1>
+        <p id="status" role="status">Carregando...</p>
+        <div class="grade-locais" id="lista"></div>
+        <button type="button" class="btn-rejeitar" id="sair" style="margin-top:2rem">Sair do painel</button>
+       </div>
+      </section>
+    </main>
+
+    <footer><p>&copy; 2026 Perto. Todos os direitos reservados.</p></footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4"></script>
+    <script src="common.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

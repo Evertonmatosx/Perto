@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Gerencie as empresas cadastradas na sua conta Perto." />
+    <meta name="theme-color" content="#426b52" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cadastroempresa.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Minhas empresas | Perto</title>
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="index.html">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Perto
+      </a>
+      <nav aria-label="Principal"><ul class="nav-links"></ul></nav>
+    </header>
+
+    <main class="cadastro-empresa">
+      <section class="cadastro-intro">
+        <h1>Minhas empresas</h1>
+        <p>Edite as informações e a imagem das empresas vinculadas à sua conta.</p>
+      </section>
+      <section class="cadastro-card empresas-conta" aria-label="Empresas da conta">
+        <p id="mensagemEmpresas" role="status" aria-live="polite">Carregando empresas...</p>
+        <div id="listaEmpresas" class="grade-locais"></div>
+        <a class="btn-category" href="cadastroempresa.html">Cadastrar outra empresa</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Perto. Todos os direitos reservados.</p>
+      <p class="footer-text">
+        Desenvolvido por
+        <a href="https://evertonmatosx.github.io/curriculo_online/">Emtsx_</a>
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4"></script>
+    <script src="common.js"></script>
+    <script src="minhas-empresas.js"></script>
+  </body>
+</html>

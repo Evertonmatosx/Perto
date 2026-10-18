@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastre sua empresa no Perto para que os usuários possam encontrá-la facilmente.">
+    <meta name="theme-color" content="#426b52">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cadastroempresa.css">
+    <title>Cadastrar Empresa | Perto</title>
+</head>
+<body>
+    <header>
+        <a class="logo" href="index.html">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            Perto
+        </a>
+
+        <nav aria-label="Principal">
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="category.html">Locais</a></li>
+                <li><a href="cadastro.html">Cadastrar-se</a></li>
+                <li><a href="login.html">Entrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="cadastro-empresa">
+        <section class="cadastro-intro">
+            <h1>Cadastre sua empresa</h1>
+            <p>
+                Divulgue seu negócio no Perto ou atualize os dados da empresa
+                vinculada à sua conta.
+            </p>
+        </section>
+
+        <section class="cadastro-card" aria-label="Formulário de cadastro da empresa">
+            <form id="formEmpresa">
+                <div class="form-grid">
+                    <div class="campo">
+                        <label for="nome">Nome da empresa <span aria-hidden="true">*</span></label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            maxlength="150"
+                            autocomplete="organization"
+                            placeholder="Ex.: Mercado do Bairro"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="categoria">Categoria <span aria-hidden="true">*</span></label>
+                        <select id="categoria" name="categoria" required>
+                            <option value="">Selecione uma categoria</option>
+                        </select>
+                    </div>
+
+                    <div class="campo campo-largo">
+                        <label for="descricao">Descrição da empresa</label>
+                        <textarea
+                            id="descricao"
+                            name="descricao"
+                            rows="4"
+                            maxlength="1000"
+                            placeholder="Conte um pouco sobre sua empresa."
+                        ></textarea>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefone">Telefone ou WhatsApp</label>
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            maxlength="30"
+                            autocomplete="tel"
+                            placeholder="(91) 99999-9999"
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="cidade">Cidade <span aria-hidden="true">*</span></label>
+                        <input
+                            type="text"
+                            id="cidade"
+                            name="cidade"
+                            maxlength="100"
+                            autocomplete="address-level2"
+                            placeholder="Sua cidade"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo campo-largo">
+                        <label for="endereco">Endereço comercial</label>
+                        <input
+                            type="text"
+                            id="endereco"
+                            name="endereco"
+                            maxlength="250"
+                            autocomplete="street-address"
+                            placeholder="Rua, número e bairro"
+                        >
+                    </div>
+
+                    <div class="campo campo-largo">
+                        <label for="logo">Imagem da empresa</label>
+                        <input
+                            type="file"
+                            id="logo"
+                            name="logo"
+                            accept="image/jpeg,image/png,image/webp"
+                            aria-describedby="logoAjuda"
+                        >
+                        <small id="logoAjuda">JPG, PNG ou WebP; tamanho máximo de 5 MB.</small>
+                        <img id="logoPreview" class="logo-preview" alt="Prévia da imagem da empresa" hidden>
+                    </div>
+
+                    <div class="campo campo-largo">
+                        <label for="servicos">Serviços oferecidos</label>
+                        <textarea
+                            id="servicos"
+                            name="servicos"
+                            rows="4"
+                            maxlength="1500"
+                            placeholder="Ex.: manutenção, instalação, entregas..."
+                        ></textarea>
+                    </div>
+                </div>
+
+                <p class="aviso-cadastro">
+                    Novos cadastros e alterações ficam pendentes de aprovação.
+                </p>
+
+                <button type="submit" id="btnCadastrar">
+                    Cadastrar empresa
+                </button>
+
+                <p id="mensagemCadastro" role="status" aria-live="polite"></p>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Perto. Todos os direitos reservados.</p>
+        <p class="footer-text">
+            Desenvolvido por
+            <a href="https://evertonmatosx.github.io/curriculo_online/">Emtsx_</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4"></script>
+    <script src="common.js"></script>
+    <script src="cadastroempresa.js"></script>
+</body>
+</html>

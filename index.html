@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Perto: encontre os melhores locais próximos de você."
+    />
+    <meta name="theme-color" content="#426b52" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Perto</title>
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="index.html">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Perto
+      </a>
+      <nav aria-label="Principal">
+        <ul class="nav-links">
+          <li><a href="index.html" aria-current="page">Início</a></li>
+          <li><a href="category.html">Locais</a></li>
+          <li><a href="cadastro.html">Cadastrar-se</a></li>
+          <li><a href="login.html">Entrar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>Bem-vindo ao Perto</h1>
+        <p>Encontre os melhores locais próximos de você.</p>
+      </section>
+
+      <div class="search-section">
+        <h2>Pesquisar Locais</h2>
+        <form action="category.html" method="get" role="search">
+          <label for="busca" class="sr-only">Buscar local</label>
+          <input
+            id="busca"
+            type="search"
+            name="q"
+            placeholder="Digite o local que procura..."
+          />
+          <button type="submit" class="btn-search">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            Buscar
+          </button>
+        </form>
+      </div>
+
+      <div class="category-section">
+        <h2 class="section-title">Explorar por Categoria</h2>
+        <p>
+          Encontre locais agrupados por categorias para facilitar sua busca.
+        </p>
+        <a href="category.html" class="btn-category">
+          Buscar por Categoria
+          <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <section class="carrossel" aria-label="Locais em destaque">
+        <h2 class="carrossel-title">Locais em Destaque</h2>
+        <div class="carrossel-controles">
+          <button
+            class="carrossel-btn carrossel-anterior"
+            type="button"
+            aria-label="Local anterior"
+          >
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <div
+            class="carrossel-container"
+            tabindex="0"
+            aria-label="Lista de locais em destaque"
+          >
+            <a class="carrossel-item" href="category.html?cat=Sa%C3%BAde">
+              <img src="images/service1.png" alt="Academia" loading="lazy" />
+              <h3>Academia</h3>
+              <p>Musculação, funcional e aulas em grupo.</p>
+            </a>
+            <a class="carrossel-item" href="category.html?cat=Alimenta%C3%A7%C3%A3o">
+              <img src="images/service2.jpg" alt="Restaurante" loading="lazy" />
+              <h3>Restaurante</h3>
+              <p>Comida regional no almoço e no jantar.</p>
+            </a>
+            <a class="carrossel-item" href="category.html?cat=Com%C3%A9rcio">
+              <img
+                src="images/service3.png"
+                alt="Loja de eletrônicos"
+                loading="lazy"
+              />
+              <h3>Loja de Eletrônicos</h3>
+              <p>Celulares, acessórios e assistência técnica.</p>
+            </a>
+            <a class="carrossel-item" href="category.html?cat=Servi%C3%A7os%20automotivos">
+              <img
+                src="images/service4.jpg"
+                alt="Oficina mecânica"
+                loading="lazy"
+              />
+              <h3>Oficina Mecânica</h3>
+              <p>Revisão, freios, suspensão e elétrica.</p>
+            </a>
+            <a class="carrossel-item" href="category.html?cat=Sa%C3%BAde">
+              <img src="images/service5.jpg" alt="Farmácia" loading="lazy" />
+              <h3>Farmácia</h3>
+              <p>Medicamentos, perfumaria e entrega local.</p>
+            </a>
+            <a class="carrossel-item" href="category.html?cat=Com%C3%A9rcio">
+              <img
+                src="images/service6.jpg"
+                alt="Supermercado"
+                loading="lazy"
+              />
+              <h3>Supermercado</h3>
+              <p>Mercearia, hortifruti, padaria e açougue.</p>
+            </a>
+          </div>
+          <button
+            class="carrossel-btn carrossel-proximo"
+            type="button"
+            aria-label="Próximo local"
+          >
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Perto. Todos os direitos reservados.</p>
+      <p class="footer-text">
+        Desenvolvido por
+        <a href="https://evertonmatosx.github.io/curriculo_online/">Emtsx_</a>
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4"></script>
+    <script src="common.js"></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
